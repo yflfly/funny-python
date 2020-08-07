@@ -21,6 +21,7 @@ print(os.path.basename(__file__))
 返回当前脚本的文件名
 '''
 
+
 '''
 关于os.path()模块的使用可以参考下面网址：
 https://www.runoob.com/python/python-os-path.html
