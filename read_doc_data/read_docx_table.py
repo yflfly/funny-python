@@ -47,6 +47,8 @@ def read_word(word_path):
     doc = docx.Document(word_path)
     for block in iter_block_items(doc):
         if isinstance(block, Paragraph):
+            if '<w:numPr>' in block._element.xml:
+                print(block._element.xml)
             para = block.text
             print("text", [para])
             if para:
