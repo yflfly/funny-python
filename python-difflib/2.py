@@ -29,10 +29,11 @@ def compare_file(file1_name, file2_name):
     print(text2_lines)
     diff = difflib.HtmlDiff()  # 创建htmldiff 对象
     result = diff.make_file(text1_lines, text2_lines)  # 通过make_file 方法输出 html 格式的对比结果
+    result = diff.make_table(text1_lines, text2_lines)  # 通过make_file 方法输出 html 格式的对比结果
     # print(result)
     #  将结果保存到result.html文件中并打开
     try:
-        with open('data/result.html', 'w', encoding='utf-8') as result_file:
+        with open('data/result_table.html', 'w', encoding='utf-8') as result_file:
             result_file.write(result)
     except IOError as error:
         print('写入html文件错误：{0}'.format(error))
@@ -50,3 +51,7 @@ if __name__ == "__main__":
     file2_name = 'data/ceshi2.txt'
 
     compare_file(file1_name, file2_name)
+
+'''
+
+'''
