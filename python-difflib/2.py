@@ -24,10 +24,12 @@ def compare_file(file1_name, file2_name):
         print('文件路径不能为空：file1_name的路径为：{0}, file2_name的路径为：{1} .'.format(file1_name, file2_name))
         sys.exit()
     text1_lines = read_file(file1_name)
+    print(text1_lines)
     text2_lines = read_file(file2_name)
+    print(text2_lines)
     diff = difflib.HtmlDiff()  # 创建htmldiff 对象
     result = diff.make_file(text1_lines, text2_lines)  # 通过make_file 方法输出 html 格式的对比结果
-    print(result)
+    # print(result)
     #  将结果保存到result.html文件中并打开
     try:
         with open('data/result.html', 'w', encoding='utf-8') as result_file:
