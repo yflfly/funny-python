@@ -35,3 +35,12 @@ print(result)
 d = difflib.HtmlDiff()
 with codecs.open("data/diff.html", 'w', 'utf-8') as f:
     f.write(d.make_file(text1, text2))
+
+'''
+各个差异符号表示含义:
+'-':包含在第一个序列行中，不包含在第二个序列行中
+'+':包含在第二个序列行中，不包含在第一个序列行中
+'':两个序列行一致
+'?':标志两个序列行存在增量差异
+'^':标志出两个序列存在的差异字符
+'''
