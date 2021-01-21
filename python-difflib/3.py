@@ -28,7 +28,7 @@ def compare_file(file1_name, file2_name):
     text2_lines = read_file(file2_name)
     print(text2_lines)
     diff = difflib.Differ()  # 创建htmldiff 对象
-    result = diff.compare(text1_lines, text2_lines)
+    result = list(diff.compare(text1_lines, text2_lines))
     print('\n'.join(result))
 
 
