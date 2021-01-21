@@ -11,3 +11,5 @@ class difflib.SequenceMatcher <br>
 class difflib.Differ <br>
 此类比较的是文本行的差异并且产生适合人类阅读的差异结果或者增量结果 <br>
 
+参考网址:<br>
+https://docs.python.org/zh-cn/3.7/library/difflib.html <br>
