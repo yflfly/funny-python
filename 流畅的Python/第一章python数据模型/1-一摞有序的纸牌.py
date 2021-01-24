@@ -13,7 +13,12 @@ class FrenchDeck:
         self._cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]
 
     def __len__(self):
-        return len(self.cards)
+        return len(self._cards)  # 52
 
     def __getitem__(self, position):
         return self._cards[position]
+
+
+# 使用 可以用len()函数来查看一叠牌有多少张
+deck = FrenchDeck()
+print(len(deck))
