@@ -1,5 +1,6 @@
 # coding:utf-8
 import collections
+from random import choice
 
 # 构建了一个简单的类来白哦是一张纸牌
 Card = collections.namedtuple('card', ['rank', 'suit'])
@@ -30,4 +31,15 @@ print(deck[-1])
 # 输出结果
 card(rank='2', suit='spades')
 card(rank='A', suit='hearts')
+'''
+
+print(choice(deck))
+print(choice(deck))
+print(choice(deck))
+'''
+python内置了从一个序列中随机选出一个元素的函数random.choice，直接把它用在这一摞纸牌实例上就好
+# 输出结果：
+card(rank='Q', suit='hearts')
+card(rank='2', suit='hearts')
+card(rank='10', suit='hearts')
 '''
