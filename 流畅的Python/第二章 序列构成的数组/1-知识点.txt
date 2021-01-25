@@ -1,0 +1,16 @@
+字符串、列表、字节序列、数组、XML元素等，都共用了一套丰富的操作：迭代、切片、排序，还有拼接
+
+1)容器序列
+list、tuple和collections.deque这些序列能存放不同类型的数据
+
+2)扁平序列
+str、bytes、bytearray、memoryview和array.array，这类序列只能容纳一种类型。
+
+容器序列存放的是它们所包含的任意类型的对象的引用，而扁平序列里存放的是值而不是引用。
+换句话说，扁平序列其实是一段连续的内存空间。由此可见扁平序列其实更加紧凑，但是它里面只能存放诸如字符、字节和数值这种基础类型。
+
+1)可变序列
+list、bytearray、array.array、collections.deque和memoryview。
+
+2)不可变序列
+tuple、str和bytes
