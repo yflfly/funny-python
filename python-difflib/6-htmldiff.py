@@ -15,14 +15,18 @@ text2 = '''1. 中文自然语言处理
 # 1. 以字符串方式展示两个文本的不同， 效果如下:
 d = difflib.Differ()
 result = list(d.compare(text1, text2))
-result = " ".join(result)
 print(result)
+print(len(result))
+for i, content in enumerate(result):
+    print(i, content.split('\t'))
+result = " ".join(result)
+# print(result)
+
 
 # 2. 以html方式展示两个文本的不同， 浏览器打开:
 d = difflib.HtmlDiff()
 with codecs.open("data/diff-zhongwen.html", 'w', 'utf-8') as f:
     f.write(d.make_file(text1, text2))
-
 
 '''
 讲解说明：
