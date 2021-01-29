@@ -26,7 +26,7 @@ result = " ".join(result)
 # 2. 以html方式展示两个文本的不同， 浏览器打开:
 d = difflib.HtmlDiff()
 with codecs.open("data/diff-zhongwen.html", 'w', 'utf-8') as f:
-    f.write(d.make_file(text1, text2))
+    f.write(d.make_file(text1, text2, fromdesc='文本1', todesc='文本2'))
 
 '''
 讲解说明：
