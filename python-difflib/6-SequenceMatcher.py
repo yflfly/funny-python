@@ -48,3 +48,17 @@ for tag, i1, i2, j1, j2 in matcher.get_opcodes():
 
 print('s1 == s2:', s1 == s2)
 print(matcher.get_opcodes())
+
+'''
+解释：
+s=difflib.SequenceMatcher(isjunk=None,a,b, autojunk=True) ：构造函数，主要创建任何类型序列的比较对象。
+isjunk是关键字参数，主要设置过滤函数，如想丢掉a和b比较序列里特定的字符，就可以设置相应的函数
+
+s.get_opcodes()函数每执行一次返回5个元素的元组，元组描述了a和b比较序列的相同不同处。5个元素的元组表示为(tag, i1, i2, j1, j2)，其中tag表示动作，i1表示序列a的开始位置，i2表示序列a的结束位置，j1表示序列b的开始位置，j2表示序列b的结束位置。
+tag表示的字符串为：
+replace 表示a[i1 : i2]将要被b[j1 : j2]替换。
+delete  表示a[i1 : i2]将要被删除。
+insert  表示b[j1 : j2]将被插入到a[i1 : i1]地方。
+equal  表示a[i1 : i2] == b[j1 : j2]相同。
+
+'''
