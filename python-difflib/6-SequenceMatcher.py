@@ -1,21 +1,4 @@
-import difflib
-import codecs
-
-# ['', '1 line', '2 line']
-text1 = '''1. 中文自然语言处理
-    2. 自然语言处理哈
-    3. 自然语言处理NLP
-    5. 哈哈哈哈'''.splitlines(keepends=True)
-
-text2 = '''1. 中文自然语言处理
-    2. 自然语言处理
-    4. 哈喽自然语言处理
-    5. 哈哈哈哈'''.splitlines(keepends=True)
-
-# python 3.6
-# 蔡军生
-# http://blog.csdn.net/caimouse/article/details/51749579
-#
+# coding:utf-8
 import difflib
 
 s1 = '''1. 中文自然语言处理
